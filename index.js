@@ -1,25 +1,19 @@
 var request = require('request-promise');
-
-options = {
-  sellerNickname : 'jm-motors',
-  token : 'APP_USR-8981171931573837-042121-893bb2d0fd95efdb05ed227af14e6be1__N_M__-79670244',
-  oldText : 'http://imageshack.com/a/img537/9265/oAGnVY.jpg',
-  newText : 'http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9568050anunciomercadojmmoto.png',
-};
+var options = require('./options');
 
 function httpGet(url) {
-  var options = {
+  var httpoptions = {
     uri: url,
     headers: {
       'User-Agent': 'Request-Promise',
     },
     json: true,
   };
-  return request(options);
+  return request(httpoptions);
 };
 
 function httpPut(url, body) {
-  var options = {
+  var httpoptions = {
     method: 'PUT',
     uri: url,
     body: body,
@@ -28,10 +22,12 @@ function httpPut(url, body) {
     },
     json: true,
   };
-  return request(options);
+  return request(httpoptions);
 };
 
 var sellerProductsUrl = 'https://api.mercadolibre.com/sites/MLA/search?nickname={:sellerNickname}'.replace('{:sellerNickname}', options.sellerNickname);
+
+console.log('Starting products-descriptions loading process...');
 
 httpGet(sellerProductsUrl).then(function (data) {
   products = data.results;
@@ -43,7 +39,7 @@ function changeDescription(product) {
   httpGet(productUrl).then(function (data) {
     data.text = data.text.replace(options.oldText, options.newText)
     httpPut(productUrl, data).then(function () {
-      console.log('Se actualizó el producto: ' + product.title);
+      console.log('Updated product: ' + product.title);
     });
   });
 };
