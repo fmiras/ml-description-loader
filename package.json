@@ -1,9 +1,10 @@
 {
   "name": "ml-description-loader",
   "version": "1.0.0",
-  "description": "",
+  "description": "Configurable node module used to replace a text of a MercadoLibre product description",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Federico Mirás (http://github.com/fmiras)",
