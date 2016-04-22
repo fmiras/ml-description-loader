@@ -1,0 +1,14 @@
+{
+  "name": "ml-description-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Federico Mirás (http://github.com/fmiras)",
+  "license": "ISC",
+  "dependencies": {
+    "request-promise": "^3.0.0"
+  }
+}
