@@ -1,6 +1,6 @@
 {
-  sellerNickname : 'jm-motors',
-  token : 'APP_USR-8981171931573837-042121-893bb2d0fd95efdb05ed227af14e6be1__N_M__-79670244',
-  oldText : 'http://imageshack.com/a/img537/9265/oAGnVY.jpg',
-  newText : 'http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9568050anunciomercadojmmoto.png',
+  "sellerNickname" : "jm-motors",
+  "token" : "APP_USR-8981171931573837-042121-893bb2d0fd95efdb05ed227af14e6be1__N_M__-79670244",
+  "oldText" : "http://imageshack.com/a/img537/9265/oAGnVY.jpg",
+  "newText" : "http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/imagen/9568050anunciomercadojmmoto.png"
 }
